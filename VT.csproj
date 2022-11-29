@@ -8,4 +8,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="dsVT.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsVT.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dsVT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVT.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
 </Project>

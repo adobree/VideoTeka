@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsVT" targetNamespace="http://tempuri.org/dsVT.xsd" xmlns:mstns="http://tempuri.org/dsVT.xsd" xmlns="http://tempuri.org/dsVT.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsVT" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsVT" msprop:Generator_DataSetName="dsVT">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtFilmek" msprop:Generator_RowEvHandlerName="dtFilmekRowChangeEventHandler" msprop:Generator_RowDeletedName="dtFilmekRowDeleted" msprop:Generator_RowDeletingName="dtFilmekRowDeleting" msprop:Generator_RowEvArgName="dtFilmekRowChangeEvent" msprop:Generator_TablePropName="dtFilmek" msprop:Generator_RowChangedName="dtFilmekRowChanged" msprop:Generator_RowChangingName="dtFilmekRowChanging" msprop:Generator_TableClassName="dtFilmekDataTable" msprop:Generator_RowClassName="dtFilmekRow" msprop:Generator_TableVarName="tabledtFilmek" msprop:Generator_UserTableName="dtFilmek">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="Cim" msprop:Generator_ColumnPropNameInRow="Cim" msprop:Generator_ColumnPropNameInTable="CimColumn" msprop:Generator_ColumnVarNameInTable="columnCim" msprop:Generator_UserColumnName="Cim" type="xs:string" minOccurs="0" />
+              <xs:element name="MegjEV" msprop:Generator_ColumnPropNameInRow="MegjEV" msprop:Generator_ColumnPropNameInTable="MegjEVColumn" msprop:Generator_ColumnVarNameInTable="columnMegjEV" msprop:Generator_UserColumnName="MegjEV" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtUser" msprop:Generator_RowEvHandlerName="dtUserRowChangeEventHandler" msprop:Generator_RowDeletedName="dtUserRowDeleted" msprop:Generator_RowDeletingName="dtUserRowDeleting" msprop:Generator_RowEvArgName="dtUserRowChangeEvent" msprop:Generator_TablePropName="dtUser" msprop:Generator_RowChangedName="dtUserRowChanged" msprop:Generator_RowChangingName="dtUserRowChanging" msprop:Generator_TableClassName="dtUserDataTable" msprop:Generator_RowClassName="dtUserRow" msprop:Generator_TableVarName="tabledtUser" msprop:Generator_UserTableName="dtUser">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="Nev" msprop:Generator_ColumnPropNameInRow="Nev" msprop:Generator_ColumnPropNameInTable="NevColumn" msprop:Generator_ColumnVarNameInTable="columnNev" msprop:Generator_UserColumnName="Nev" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtFU" msprop:Generator_RowEvHandlerName="dtFURowChangeEventHandler" msprop:Generator_RowDeletedName="dtFURowDeleted" msprop:Generator_RowDeletingName="dtFURowDeleting" msprop:Generator_RowEvArgName="dtFURowChangeEvent" msprop:Generator_TablePropName="dtFU" msprop:Generator_RowChangedName="dtFURowChanged" msprop:Generator_RowChangingName="dtFURowChanging" msprop:Generator_TableClassName="dtFUDataTable" msprop:Generator_RowClassName="dtFURow" msprop:Generator_TableVarName="tabledtFU" msprop:Generator_UserTableName="dtFU">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idFilmek" msprop:Generator_ColumnPropNameInRow="idFilmek" msprop:Generator_ColumnPropNameInTable="idFilmekColumn" msprop:Generator_ColumnVarNameInTable="columnidFilmek" msprop:Generator_UserColumnName="idFilmek" type="xs:int" minOccurs="0" />
+              <xs:element name="idUser" msprop:Generator_ColumnPropNameInRow="idUser" msprop:Generator_ColumnPropNameInTable="idUserColumn" msprop:Generator_ColumnVarNameInTable="columnidUser" msprop:Generator_UserColumnName="idUser" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtFilmek" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="dtUser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtUser" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:keyref name="FK_dtUser_dtFU" refer="dtUser_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:dtFU" />
+      <xs:field xpath="mstns:idUser" />
+    </xs:keyref>
+    <xs:keyref name="FK_dtFilmek_dtFU" refer="Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:dtFU" />
+      <xs:field xpath="mstns:idFilmek" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
