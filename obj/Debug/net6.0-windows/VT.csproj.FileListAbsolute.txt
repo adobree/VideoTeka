@@ -1,0 +1,17 @@
+C:\Users\adamkovacs\source\repos\VT\bin\Debug\net6.0-windows\VT.exe
+C:\Users\adamkovacs\source\repos\VT\bin\Debug\net6.0-windows\VT.deps.json
+C:\Users\adamkovacs\source\repos\VT\bin\Debug\net6.0-windows\VT.runtimeconfig.json
+C:\Users\adamkovacs\source\repos\VT\bin\Debug\net6.0-windows\VT.dll
+C:\Users\adamkovacs\source\repos\VT\bin\Debug\net6.0-windows\VT.pdb
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.csproj.AssemblyReference.cache
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.Form1.resources
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.csproj.GenerateResource.cache
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.AssemblyInfoInputs.cache
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.AssemblyInfo.cs
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.csproj.CoreCompileInputs.cache
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.dll
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\refint\VT.dll
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.pdb
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.genruntimeconfig.cache
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\ref\VT.dll
