@@ -36,8 +36,10 @@
       this.kIBEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.mentésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.dgv = new System.Windows.Forms.DataGridView();
       ((System.ComponentModel.ISupportInitialize)(this.dsVT)).BeginInit();
       this.menuStrip1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
       this.SuspendLayout();
       // 
       // dsVT
@@ -67,12 +69,14 @@
       this.filmekToolStripMenuItem.Name = "filmekToolStripMenuItem";
       this.filmekToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
       this.filmekToolStripMenuItem.Text = "Filmek";
+      this.filmekToolStripMenuItem.Click += new System.EventHandler(this.filmekToolStripMenuItem_Click);
       // 
       // felhasználókToolStripMenuItem
       // 
       this.felhasználókToolStripMenuItem.Name = "felhasználókToolStripMenuItem";
       this.felhasználókToolStripMenuItem.Size = new System.Drawing.Size(128, 29);
       this.felhasználókToolStripMenuItem.Text = "Felhasználók";
+      this.felhasználókToolStripMenuItem.Click += new System.EventHandler(this.felhasználókToolStripMenuItem_Click);
       // 
       // raktárToolStripMenuItem
       // 
@@ -99,11 +103,26 @@
       this.kilépésToolStripMenuItem.Text = "Kilépés";
       this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
       // 
+      // dgv
+      // 
+      this.dgv.AllowUserToAddRows = false;
+      this.dgv.AllowUserToDeleteRows = false;
+      this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dgv.Location = new System.Drawing.Point(12, 36);
+      this.dgv.Name = "dgv";
+      this.dgv.ReadOnly = true;
+      this.dgv.RowHeadersWidth = 62;
+      this.dgv.RowTemplate.Height = 33;
+      this.dgv.Size = new System.Drawing.Size(600, 390);
+      this.dgv.TabIndex = 1;
+      this.dgv.Visible = false;
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.dgv);
       this.Controls.Add(this.menuStrip1);
       this.MainMenuStrip = this.menuStrip1;
       this.Name = "Form1";
@@ -111,6 +130,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.dsVT)).EndInit();
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -126,5 +146,6 @@
         private ToolStripMenuItem kIBEToolStripMenuItem;
         private ToolStripMenuItem mentésToolStripMenuItem;
         private ToolStripMenuItem kilépésToolStripMenuItem;
+        private DataGridView dgv;
     }
 }

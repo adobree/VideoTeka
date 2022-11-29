@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<dsVT xmlns="http://tempuri.org/dsVT.xsd">
+  <dtFilmek>
+    <id>1</id>
+    <Cim>Godzilla</Cim>
+    <MegjEV>1990</MegjEV>
+  </dtFilmek>
+  <dtFilmek>
+    <id>2</id>
+    <Cim>Micsoda No</Cim>
+    <MegjEV>1992</MegjEV>
+  </dtFilmek>
+  <dtFilmek>
+    <id>3</id>
+    <Cim>Haz a tonal</Cim>
+    <MegjEV>1993</MegjEV>
+  </dtFilmek>
+  <dtFilmek>
+    <id>4</id>
+    <Cim>Erin Brockovich - Zűrös természet</Cim>
+    <MegjEV>1990</MegjEV>
+  </dtFilmek>
+  <dtFilmek>
+    <id>5</id>
+    <Cim>Batman</Cim>
+    <MegjEV>1995</MegjEV>
+  </dtFilmek>
+  <dtUser>
+    <id>1</id>
+    <Nev>Kovacs Adam</Nev>
+    <Email>ado.kovacs@gmail.com</Email>
+  </dtUser>
+  <dtUser>
+    <id>2</id>
+    <Nev>Nagy Gabor</Nev>
+    <Email>anagybogar@gmail.com</Email>
+  </dtUser>
+  <dtUser>
+    <id>3</id>
+    <Nev>Komives-Kaldi Csilla</Nev>
+    <Email>komivescs@gmail.com</Email>
+  </dtUser>
+  <dtFU>
+    <idFilmek>1</idFilmek>
+    <idUser>1</idUser>
+  </dtFU>
+  <dtFU>
+    <idFilmek>2</idFilmek>
+    <idUser>3</idUser>
+  </dtFU>
+</dsVT>
