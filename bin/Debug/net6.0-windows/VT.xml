@@ -26,6 +26,11 @@
     <MegjEV>1995</MegjEV>
   </dtFilmek>
   <dtUser>
+    <id>4</id>
+    <Nev>RAKTAR</Nev>
+    <Email>raktar@raktar.com</Email>
+  </dtUser>
+  <dtUser>
     <id>1</id>
     <Nev>Kovacs Adam</Nev>
     <Email>ado.kovacs@gmail.com</Email>
