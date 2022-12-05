@@ -91,30 +91,66 @@ namespace VT
         }
         private void btKölcsönöz_Click(object sender, EventArgs e)
         {
-            törlés();
-            //var KiválasztottSorokSzáma = 
-            if (dsVT == null) return;
-            var KiválasztottFilm = (cbFilm.SelectedItem as DataRowView)?.Row 
+            // Kiválasztott film
+            var KiválasztottFilm = (cbFilm.SelectedItem as DataRowView)?.Row
                 as dsVT.dtFilmekRow;
+            // Kiválasztott user
             var KiválasztottUser = (cbUser.SelectedItem as DataRowView)?.Row
                  as dsVT.dtUserRow;
-            var Kölcsönözve = from i in dsVT.dtFU
-                              where i.idFilmek.ToString() == KiválasztottFilm["id"]
-                              select new
-                              {
-                                  i.idFilmek
-                              };
-            MessageBox.Show(Kölcsönözve.ToString());
-            var res = from sor in dsVT.dtFU
-                      where sor.idFilmek == KiválasztottFilm.id &&
-                      sor.idFilmek == KiválasztottUser.id
-                      select sor;
-            if(res.Count() > 0)
+            // Kiválasztott user id-ja
+            var KiválasztottUserId = (from u in dsVT.dtUser
+                                      where u.Nev == (cbUser.SelectedItem as DataRowView)?.Row["Nev"] as string
+                                      select u.id).FirstOrDefault();
+            // Kiválasztott user id-ja
+            var KiválasztottFilmId = (from u in dsVT.dtFilmek
+                                      where u.Cim == (cbFilm.SelectedItem as DataRowView)?.Row["Cim"] as string
+                                      select u.id).FirstOrDefault();
+
+            var kivéve = false;
+            for (int i = dsVT.dtFU.Rows.Count - 1; i >= 0; i--)
             {
-                MessageBox.Show("A film tényleg ki van véve");
-                return;
+                DataRow dr = dsVT.dtFU.Rows[i];
+                if (dr["idFilmek"].ToString() == KiválasztottFilmId.ToString() && dr["idUser"].ToString() == "0")
+                {
+                    // Törlés a kapcsolótáblából
+                    dr.Delete();
+                    // Hozzáadás a táblához a user ID-val
+                    dsVT.dtFU.AdddtFURow(KiválasztottFilmId, KiválasztottUserId);
+                    // Üzenet
+                    MessageBox.Show("A(z) " + KiválasztottFilm["Cim"] + " c. filmet sikeresen kikölcsönözte!");
+                    // Sikeres kivét
+                    kivéve = true;
+                }
+                //MessageBox.Show(dr["idFilmek"].ToString());
             }
-          MessageBox.Show(KiválasztottFilm["Cim"] as string);
+            if(kivéve == false)
+            {
+                MessageBox.Show("A filmet már valaki kikölcsönözte!");
+            }
+            //  törlés();
+            //  //var KiválasztottSorokSzáma = 
+            //  if (dsVT == null) return;
+            //  var KiválasztottFilm = (cbFilm.SelectedItem as DataRowView)?.Row 
+            //      as dsVT.dtFilmekRow;
+            //  var KiválasztottUser = (cbUser.SelectedItem as DataRowView)?.Row
+            //       as dsVT.dtUserRow;
+            //  var Kölcsönözve = from i in dsVT.dtFU
+            //                    where i.idFilmek.ToString() == KiválasztottFilm["id"]
+            //                    select new
+            //                    {
+            //                        i.idFilmek
+            //                    };
+            //  MessageBox.Show(Kölcsönözve.ToString());
+            //  var res = from sor in dsVT.dtFU
+            //            where sor.idFilmek == KiválasztottFilm.id &&
+            //            sor.idFilmek == KiválasztottUser.id
+            //            select sor;
+            //  if(res.Count() > 0)
+            //  {
+            //      MessageBox.Show("A film tényleg ki van véve");
+            //      return;
+            //  }
+            //MessageBox.Show(KiválasztottFilm["Cim"] as string);
 
         }
 
