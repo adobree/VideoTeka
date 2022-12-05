@@ -15,9 +15,14 @@ namespace VT
 
         private void Lement()
         {
-            MessageBox.Show("Sikeres mentés!");
-      dsVT.WriteXml("VT.xml",XmlWriteMode.IgnoreSchema);
-        }
+          try
+            {
+              dsVT.WriteXml("VT.xml", XmlWriteMode.IgnoreSchema);
+              MessageBox.Show("Sikeres mentés!");
+            } catch {
+              MessageBox.Show("SIKERTELEN mentés!");
+            }
+         }
 
         private void Letrehoz()
         {
@@ -29,7 +34,7 @@ namespace VT
             dsVT.dtUser.AdddtUserRow(1, "Kovacs Adam", "ado.kovacs@gmail.com");
             dsVT.dtUser.AdddtUserRow(2, "Nagy Gabor", "anagybogar@gmail.com");
             dsVT.dtUser.AdddtUserRow(3, "Komives-Kaldi Csilla", "komivescs@gmail.com");
-            dsVT.dtUser.AdddtUserRow(4, "RAKTAR", "raktar@raktar.com");
+            dsVT.dtUser.AdddtUserRow(0, "RAKTAR", "raktar@raktar.com");
             dsVT.dtFU.AdddtFURow(1, 1);
             dsVT.dtFU.AdddtFURow(2, 3);
         }
@@ -55,23 +60,31 @@ namespace VT
 
         private void filmekToolStripMenuItem_Click(object sender, EventArgs e)
         {
+      ucFilmek.dsVT = dsVT;
+      ucFelhaszn.Visible= false;
+      ucFilmek.Visible = true;
       dgv.Visible = true;
-      dgv.Dock = DockStyle.Fill;
       dgv.DataSource = dsVT.dtFilmek;
-        }
+      ucKolcsonzes.Visible = false;
+    }
 
         private void felhasználókToolStripMenuItem_Click(object sender, EventArgs e)
         {
+      ucFelhaszn.dsVT = dsVT;
+      ucFelhaszn.Visible = true;
+      ucFilmek.Visible = false;
       dgv.Visible = true;
-      dgv.Dock = DockStyle.Fill;
       dgv.DataSource = dsVT.dtUser;
+      ucKolcsonzes.Visible = false;
+
     }
 
         private void raktárToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ucFilm.Visible = false;
-            dgv.Visible = true;
-            dgv.Dock = DockStyle.Fill;
+      ucFelhaszn.Visible = false;
+      ucFilmek.Visible = false;
+      ucKolcsonzes.Visible = false;
+      dgv.Visible = true;
 
             var filmek = from f in dsVT.dtFilmek
                          join fu in dsVT.dtFU
@@ -87,10 +100,12 @@ namespace VT
 
         private void kIBEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dgv.Visible = false;
-            ucFilm.dsVT = dsVT;
-            ucFilm.Visible = true;
-            ucFilm.Dock = DockStyle.Fill;
+      ucFelhaszn.Visible = false;
+      ucFilmek.Visible = false;
+      dgv.Visible = false;
+            ucKolcsonzes.dsVT = dsVT;
+            ucKolcsonzes.Visible = true;
+            ucKolcsonzes.Dock = DockStyle.Fill;
         }
 
         private void ucFilm_Load(object sender, EventArgs e)
@@ -98,7 +113,12 @@ namespace VT
 
         }
 
-        private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
+    private void ucFelhasznalok_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Lement();
         }

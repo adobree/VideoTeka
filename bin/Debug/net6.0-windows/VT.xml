@@ -3,7 +3,7 @@
   <dtFilmek>
     <id>1</id>
     <Cim>Godzilla</Cim>
-    <MegjEV>1990</MegjEV>
+    <MegjEV>1999</MegjEV>
   </dtFilmek>
   <dtFilmek>
     <id>2</id>
@@ -25,6 +25,11 @@
     <Cim>Batman</Cim>
     <MegjEV>1995</MegjEV>
   </dtFilmek>
+  <dtFilmek>
+    <id>6</id>
+    <Cim>Addams Family</Cim>
+    <MegjEV>1999</MegjEV>
+  </dtFilmek>
   <dtUser>
     <id>0</id>
     <Nev>RAKTAR</Nev>
@@ -45,6 +50,11 @@
     <Nev>Komives-Kaldi Csilla</Nev>
     <Email>komivescs@gmail.com</Email>
   </dtUser>
+  <dtUser>
+    <id>4</id>
+    <Nev>Kiss Tamas</Nev>
+    <Email>kisstamas@gmail.com</Email>
+  </dtUser>
   <dtFU>
     <idFilmek>3</idFilmek>
     <idUser>0</idUser>
@@ -59,6 +69,14 @@
   </dtFU>
   <dtFU>
     <idFilmek>2</idFilmek>
+    <idUser>0</idUser>
+  </dtFU>
+  <dtFU>
+    <idFilmek>1</idFilmek>
+    <idUser>0</idUser>
+  </dtFU>
+  <dtFU>
+    <idFilmek>6</idFilmek>
     <idUser>0</idUser>
   </dtFU>
 </dsVT>
