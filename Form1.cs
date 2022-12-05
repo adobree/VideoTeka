@@ -15,6 +15,7 @@ namespace VT
 
         private void Lement()
         {
+            MessageBox.Show("Sikeres mentés!");
       dsVT.WriteXml("VT.xml",XmlWriteMode.IgnoreSchema);
         }
 
@@ -82,7 +83,7 @@ namespace VT
                              fu.idFilmek
                          };
             dgv.DataSource = filmek.ToList();
-        }
+        } 
 
         private void kIBEToolStripMenuItem_Click(object sender, EventArgs e)
         {

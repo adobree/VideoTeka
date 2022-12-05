@@ -46,14 +46,6 @@
     <Email>komivescs@gmail.com</Email>
   </dtUser>
   <dtFU>
-    <idFilmek>1</idFilmek>
-    <idUser>1</idUser>
-  </dtFU>
-  <dtFU>
-    <idFilmek>2</idFilmek>
-    <idUser>3</idUser>
-  </dtFU>
-  <dtFU>
     <idFilmek>3</idFilmek>
     <idUser>0</idUser>
   </dtFU>
@@ -63,6 +55,18 @@
   </dtFU>
   <dtFU>
     <idFilmek>5</idFilmek>
+    <idUser>0</idUser>
+  </dtFU>
+  <dtFU>
+    <idFilmek>2</idFilmek>
+    <idUser>0</idUser>
+  </dtFU>
+  <dtFU>
+    <idFilmek>2</idFilmek>
+    <idUser>0</idUser>
+  </dtFU>
+  <dtFU>
+    <idFilmek>2</idFilmek>
     <idUser>0</idUser>
   </dtFU>
 </dsVT>
