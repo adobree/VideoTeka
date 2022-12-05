@@ -34,9 +34,10 @@
             this.felhasználókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raktárToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kIBEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mentésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.ucFilm = new VT.ucFilm();
+            this.mentésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dsVT)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -61,7 +62,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(560, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(867, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,12 +92,7 @@
             this.kIBEToolStripMenuItem.Name = "kIBEToolStripMenuItem";
             this.kIBEToolStripMenuItem.Size = new System.Drawing.Size(47, 22);
             this.kIBEToolStripMenuItem.Text = "KI/BE";
-            // 
-            // mentésToolStripMenuItem
-            // 
-            this.mentésToolStripMenuItem.Name = "mentésToolStripMenuItem";
-            this.mentésToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
-            this.mentésToolStripMenuItem.Text = "Mentés";
+            this.kIBEToolStripMenuItem.Click += new System.EventHandler(this.kIBEToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 
@@ -111,7 +107,7 @@
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(12, 22);
-            this.dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv.Margin = new System.Windows.Forms.Padding(2);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 62;
@@ -120,15 +116,33 @@
             this.dgv.TabIndex = 1;
             this.dgv.Visible = false;
             // 
+            // ucFilm
+            // 
+            this.ucFilm.dsVT = null;
+            this.ucFilm.Location = new System.Drawing.Point(437, 22);
+            this.ucFilm.Name = "ucFilm";
+            this.ucFilm.Size = new System.Drawing.Size(469, 274);
+            this.ucFilm.TabIndex = 2;
+            this.ucFilm.Visible = false;
+            this.ucFilm.Load += new System.EventHandler(this.ucFilm_Load);
+            // 
+            // mentésToolStripMenuItem
+            // 
+            this.mentésToolStripMenuItem.Name = "mentésToolStripMenuItem";
+            this.mentésToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
+            this.mentésToolStripMenuItem.Text = "Mentés";
+            this.mentésToolStripMenuItem.Click += new System.EventHandler(this.mentésToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 270);
+            this.ClientSize = new System.Drawing.Size(867, 379);
+            this.Controls.Add(this.ucFilm);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dsVT)).EndInit();
@@ -151,5 +165,6 @@
         private ToolStripMenuItem mentésToolStripMenuItem;
         private ToolStripMenuItem kilépésToolStripMenuItem;
         private DataGridView dgv;
+        private ucFilm ucFilm;
     }
 }
