@@ -15,9 +15,14 @@ namespace VT
 
         private void Lement()
         {
-            MessageBox.Show("Sikeres mentés!");
-      dsVT.WriteXml("VT.xml",XmlWriteMode.IgnoreSchema);
-        }
+          try
+            {
+              dsVT.WriteXml("VT.xml", XmlWriteMode.IgnoreSchema);
+              MessageBox.Show("Sikeres mentés!");
+            } catch {
+              MessageBox.Show("SIKERTELEN mentés!");
+            }
+         }
 
         private void Letrehoz()
         {
@@ -29,7 +34,7 @@ namespace VT
             dsVT.dtUser.AdddtUserRow(1, "Kovacs Adam", "ado.kovacs@gmail.com");
             dsVT.dtUser.AdddtUserRow(2, "Nagy Gabor", "anagybogar@gmail.com");
             dsVT.dtUser.AdddtUserRow(3, "Komives-Kaldi Csilla", "komivescs@gmail.com");
-            dsVT.dtUser.AdddtUserRow(4, "RAKTAR", "raktar@raktar.com");
+            dsVT.dtUser.AdddtUserRow(0, "RAKTAR", "raktar@raktar.com");
             dsVT.dtFU.AdddtFURow(1, 1);
             dsVT.dtFU.AdddtFURow(2, 3);
         }
@@ -55,23 +60,27 @@ namespace VT
 
         private void filmekToolStripMenuItem_Click(object sender, EventArgs e)
         {
+      ucFilmek.dsVT = dsVT;
+
+      ucFilmek.Visible = true;
       dgv.Visible = true;
-      dgv.Dock = DockStyle.Fill;
       dgv.DataSource = dsVT.dtFilmek;
-        }
+    }
 
         private void felhasználókToolStripMenuItem_Click(object sender, EventArgs e)
         {
+      ucFilmek.Visible = false;
       dgv.Visible = true;
-      dgv.Dock = DockStyle.Fill;
       dgv.DataSource = dsVT.dtUser;
+
     }
 
         private void raktárToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+      ucFilmek.Visible = false;
             ucKolcsonzes.Visible = false;
             dgv.Visible = true;
-            dgv.Dock = DockStyle.Fill;
 
             var filmek = from f in dsVT.dtFilmek
                          join fu in dsVT.dtFU
@@ -87,6 +96,8 @@ namespace VT
 
         private void kIBEToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+      ucFilmek.Visible = false;
             dgv.Visible = false;
             ucKolcsonzes.dsVT = dsVT;
             ucKolcsonzes.Visible = true;
@@ -98,7 +109,12 @@ namespace VT
 
         }
 
-        private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
+    private void ucFelhasznalok_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Lement();
         }

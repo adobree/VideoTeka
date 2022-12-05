@@ -33,3 +33,5 @@ C:\nje\VideoTeka\obj\Debug\net6.0-windows\VT.pdb
 C:\nje\VideoTeka\obj\Debug\net6.0-windows\VT.genruntimeconfig.cache
 C:\nje\VideoTeka\obj\Debug\net6.0-windows\ref\VT.dll
 C:\nje\VideoTeka\obj\Debug\net6.0-windows\VT.ucKolcsonzes.resources
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.ucKolcsonzes.resources
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.ucFilmek.resources

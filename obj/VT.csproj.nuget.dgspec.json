@@ -1,31 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "C:\\nje\\VideoTeka\\VT.csproj": {}
+    "C:\\Users\\adamkovacs\\source\\repos\\VT\\VT.csproj": {}
   },
   "projects": {
-    "C:\\nje\\VideoTeka\\VT.csproj": {
+    "C:\\Users\\adamkovacs\\source\\repos\\VT\\VT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\nje\\VideoTeka\\VT.csproj",
+        "projectUniqueName": "C:\\Users\\adamkovacs\\source\\repos\\VT\\VT.csproj",
         "projectName": "VT",
-        "projectPath": "C:\\nje\\VideoTeka\\VT.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\nje\\VideoTeka\\obj\\",
+        "projectPath": "C:\\Users\\adamkovacs\\source\\repos\\VT\\VT.csproj",
+        "packagesPath": "C:\\Users\\adamkovacs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adamkovacs\\source\\repos\\VT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adamkovacs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

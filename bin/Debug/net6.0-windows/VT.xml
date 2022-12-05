@@ -3,7 +3,7 @@
   <dtFilmek>
     <id>1</id>
     <Cim>Godzilla</Cim>
-    <MegjEV>1990</MegjEV>
+    <MegjEV>1999</MegjEV>
   </dtFilmek>
   <dtFilmek>
     <id>2</id>
@@ -24,6 +24,11 @@
     <id>5</id>
     <Cim>Batman</Cim>
     <MegjEV>1995</MegjEV>
+  </dtFilmek>
+  <dtFilmek>
+    <id>6</id>
+    <Cim>King Kong</Cim>
+    <MegjEV>2006</MegjEV>
   </dtFilmek>
   <dtUser>
     <id>0</id>
@@ -63,6 +68,6 @@
   </dtFU>
   <dtFU>
     <idFilmek>1</idFilmek>
-    <idUser>1</idUser>
+    <idUser>0</idUser>
   </dtFU>
 </dsVT>
