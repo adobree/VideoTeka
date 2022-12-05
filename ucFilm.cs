@@ -26,6 +26,8 @@ namespace VT
             cbFilm.DataSource = dsVT.dtFilmek;
             cbFilm.DisplayMember = "Cim";
 
+            var userList = dsVT.dtUser;
+            userList.DefaultView.RowFilter = "id > 0";
             cbUser.DataSource = dsVT.dtUser;
             cbUser.DisplayMember = "Nev";
             
