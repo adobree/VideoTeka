@@ -36,7 +36,7 @@
             this.kIBEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.ucFilm = new VT.ucFilm();
+            this.ucKolcsonzes = new VT.ucKolcsonzes();
             this.mentésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dsVT)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -118,13 +118,13 @@
             // 
             // ucFilm
             // 
-            this.ucFilm.dsVT = null;
-            this.ucFilm.Location = new System.Drawing.Point(437, 22);
-            this.ucFilm.Name = "ucFilm";
-            this.ucFilm.Size = new System.Drawing.Size(469, 274);
-            this.ucFilm.TabIndex = 2;
-            this.ucFilm.Visible = false;
-            this.ucFilm.Load += new System.EventHandler(this.ucFilm_Load);
+            this.ucKolcsonzes.dsVT = null;
+            this.ucKolcsonzes.Location = new System.Drawing.Point(437, 22);
+            this.ucKolcsonzes.Name = "ucFilm";
+            this.ucKolcsonzes.Size = new System.Drawing.Size(469, 274);
+            this.ucKolcsonzes.TabIndex = 2;
+            this.ucKolcsonzes.Visible = false;
+            this.ucKolcsonzes.Load += new System.EventHandler(this.ucFilm_Load);
             // 
             // mentésToolStripMenuItem
             // 
@@ -138,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 379);
-            this.Controls.Add(this.ucFilm);
+            this.Controls.Add(this.ucKolcsonzes);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -165,6 +165,6 @@
         private ToolStripMenuItem mentésToolStripMenuItem;
         private ToolStripMenuItem kilépésToolStripMenuItem;
         private DataGridView dgv;
-        private ucFilm ucFilm;
+        private ucKolcsonzes ucKolcsonzes;
     }
 }

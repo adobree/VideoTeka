@@ -69,7 +69,7 @@ namespace VT
 
         private void raktárToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ucFilm.Visible = false;
+            ucKolcsonzes.Visible = false;
             dgv.Visible = true;
             dgv.Dock = DockStyle.Fill;
 
@@ -88,9 +88,9 @@ namespace VT
         private void kIBEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dgv.Visible = false;
-            ucFilm.dsVT = dsVT;
-            ucFilm.Visible = true;
-            ucFilm.Dock = DockStyle.Fill;
+            ucKolcsonzes.dsVT = dsVT;
+            ucKolcsonzes.Visible = true;
+            ucKolcsonzes.Dock = DockStyle.Fill;
         }
 
         private void ucFilm_Load(object sender, EventArgs e)
