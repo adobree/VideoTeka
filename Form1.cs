@@ -61,26 +61,30 @@ namespace VT
         private void filmekToolStripMenuItem_Click(object sender, EventArgs e)
         {
       ucFilmek.dsVT = dsVT;
-
+      ucFelhaszn.Visible= false;
       ucFilmek.Visible = true;
       dgv.Visible = true;
       dgv.DataSource = dsVT.dtFilmek;
+      ucKolcsonzes.Visible = false;
     }
 
         private void felhasználókToolStripMenuItem_Click(object sender, EventArgs e)
         {
+      ucFelhaszn.dsVT = dsVT;
+      ucFelhaszn.Visible = true;
       ucFilmek.Visible = false;
       dgv.Visible = true;
       dgv.DataSource = dsVT.dtUser;
+      ucKolcsonzes.Visible = false;
 
     }
 
         private void raktárToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+      ucFelhaszn.Visible = false;
       ucFilmek.Visible = false;
-            ucKolcsonzes.Visible = false;
-            dgv.Visible = true;
+      ucKolcsonzes.Visible = false;
+      dgv.Visible = true;
 
             var filmek = from f in dsVT.dtFilmek
                          join fu in dsVT.dtFU
@@ -96,9 +100,9 @@ namespace VT
 
         private void kIBEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+      ucFelhaszn.Visible = false;
       ucFilmek.Visible = false;
-            dgv.Visible = false;
+      dgv.Visible = false;
             ucKolcsonzes.dsVT = dsVT;
             ucKolcsonzes.Visible = true;
             ucKolcsonzes.Dock = DockStyle.Fill;

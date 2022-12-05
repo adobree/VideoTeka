@@ -65,6 +65,7 @@ namespace VT
         sorszám = (short)(sor.id + 1);
       ÚjSor = dsVT.dtFilmek.AdddtFilmekRow(sorszám, "Újcím", 0000);
       cbFilmek.SelectedIndex = cbFilmek.Items.Count - 1;
+      dsVT.dtFU.AdddtFURow(sorszám, 0);
       btUj.Enabled = false;
     }
 

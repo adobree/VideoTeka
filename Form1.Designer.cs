@@ -39,6 +39,7 @@
       this.dgv = new System.Windows.Forms.DataGridView();
       this.ucKolcsonzes = new VT.ucKolcsonzes();
       this.ucFilmek = new VT.ucFilmek();
+      this.ucFelhaszn = new VT.ucFelhaszn();
       ((System.ComponentModel.ISupportInitialize)(this.dsVT)).BeginInit();
       this.menuStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -142,11 +143,21 @@
       this.ucFilmek.TabIndex = 3;
       this.ucFilmek.Visible = false;
       // 
+      // ucFelhaszn
+      // 
+      this.ucFelhaszn.dsVT = null;
+      this.ucFelhaszn.Location = new System.Drawing.Point(712, 36);
+      this.ucFelhaszn.Name = "ucFelhaszn";
+      this.ucFelhaszn.Size = new System.Drawing.Size(550, 554);
+      this.ucFelhaszn.TabIndex = 4;
+      this.ucFelhaszn.Visible = false;
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1239, 632);
+      this.Controls.Add(this.ucFelhaszn);
       this.Controls.Add(this.ucFilmek);
       this.Controls.Add(this.ucKolcsonzes);
       this.Controls.Add(this.dgv);
@@ -176,5 +187,6 @@
         private DataGridView dgv;
         private ucKolcsonzes ucKolcsonzes;
         private ucFilmek ucFilmek;
+        private ucFelhaszn ucFelhaszn;
     }
 }

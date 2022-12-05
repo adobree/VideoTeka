@@ -27,8 +27,8 @@
   </dtFilmek>
   <dtFilmek>
     <id>6</id>
-    <Cim>King Kong</Cim>
-    <MegjEV>2006</MegjEV>
+    <Cim>Addams Family</Cim>
+    <MegjEV>1999</MegjEV>
   </dtFilmek>
   <dtUser>
     <id>0</id>
@@ -50,6 +50,11 @@
     <Nev>Komives-Kaldi Csilla</Nev>
     <Email>komivescs@gmail.com</Email>
   </dtUser>
+  <dtUser>
+    <id>4</id>
+    <Nev>Kiss Tamas</Nev>
+    <Email>kisstamas@gmail.com</Email>
+  </dtUser>
   <dtFU>
     <idFilmek>3</idFilmek>
     <idUser>0</idUser>
@@ -68,6 +73,10 @@
   </dtFU>
   <dtFU>
     <idFilmek>1</idFilmek>
+    <idUser>0</idUser>
+  </dtFU>
+  <dtFU>
+    <idFilmek>6</idFilmek>
     <idUser>0</idUser>
   </dtFU>
 </dsVT>
