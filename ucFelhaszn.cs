@@ -81,6 +81,12 @@ namespace VT
 
         private void btTorol_Click(object sender, EventArgs e)
         {
+      var id = ((cbFelhasznalok.SelectedItem as DataRowView)?.Row as dsVT.dtUserRow)?.id;
+      if (id == 0)
+      {
+        MessageBox.Show("Ez a rekord nem torolheto!");
+        return;
+      }
       if (dsVT == null) return;
       var TöröltSor = (cbFelhasznalok.SelectedItem as DataRowView)?.Row as dsVT.dtUserRow;
       if (TöröltSor == null) return;
