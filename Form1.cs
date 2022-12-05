@@ -35,8 +35,16 @@ namespace VT
 
         private void Betolt()
         {
-            dsVT.ReadXml("VT.xml",
-              XmlReadMode.InferSchema);
+            try
+            {
+                dsVT.ReadXml("VT.xml",
+                      XmlReadMode.InferSchema);
+            }
+            catch (Exception)
+            {
+                Letrehoz();
+                Lement();
+            }
         }
 
         private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,9 +68,38 @@ namespace VT
 
         private void raktárToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ucFilm.Visible = false;
             dgv.Visible = true;
             dgv.Dock = DockStyle.Fill;
-            dgv.DataSource = dsVT.dtUser;
+
+            var filmek = from f in dsVT.dtFilmek
+                         join fu in dsVT.dtFU
+                          on f.id equals fu.idFilmek
+                         where fu.idUser == 0   // Kiválasztjuk azt a filmet, ahol az "idUser" 0 (Raktár)
+                         select new
+                         {
+                             Filmek = f.Cim,
+                             fu.idFilmek
+                         };
+            dgv.DataSource = filmek.ToList();
+        }
+
+        private void kIBEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgv.Visible = false;
+            ucFilm.dsVT = dsVT;
+            ucFilm.Visible = true;
+            ucFilm.Dock = DockStyle.Fill;
+        }
+
+        private void ucFilm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lement();
         }
     }
 }
