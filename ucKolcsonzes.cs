@@ -78,8 +78,9 @@ namespace VT
                 MessageBox.Show(KiválasztottUser["Nev"].ToString() + " felhasználónak nem volt kikölcsönözve a(z) " + KiválasztottFilm["Cim"].ToString() + " c. film");
             };
             dsVT.dtFU.AcceptChanges();
-     
-        }
+            dsVT.WriteXml("VT.xml", XmlWriteMode.IgnoreSchema);
+
+    }
     
         private void btKölcsönöz_Click(object sender, EventArgs e)
         {
@@ -119,8 +120,8 @@ namespace VT
             {
                 MessageBox.Show("A filmet már valaki kikölcsönözte!");
             }
-
-        }
+      dsVT.WriteXml("VT.xml", XmlWriteMode.IgnoreSchema);
+    }
 
         private void cbFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
