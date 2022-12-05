@@ -15,3 +15,4 @@ C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\refint\VT.dll
 C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.pdb
 C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.genruntimeconfig.cache
 C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\ref\VT.dll
+C:\Users\adamkovacs\source\repos\VT\obj\Debug\net6.0-windows\VT.ucFilmek.resources

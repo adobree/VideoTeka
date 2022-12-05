@@ -60,7 +60,7 @@
             this.kilépésToolStripMenuItem});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+      this.menuStrip1.Size = new System.Drawing.Size(1169, 33);
       this.menuStrip1.TabIndex = 0;
       this.menuStrip1.Text = "menuStrip1";
       // 
@@ -89,12 +89,14 @@
       this.kIBEToolStripMenuItem.Name = "kIBEToolStripMenuItem";
       this.kIBEToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
       this.kIBEToolStripMenuItem.Text = "KI/BE";
+      this.kIBEToolStripMenuItem.Click += new System.EventHandler(this.kIBEToolStripMenuItem_Click);
       // 
       // mentésToolStripMenuItem
       // 
       this.mentésToolStripMenuItem.Name = "mentésToolStripMenuItem";
       this.mentésToolStripMenuItem.Size = new System.Drawing.Size(86, 29);
       this.mentésToolStripMenuItem.Text = "Mentés";
+      this.mentésToolStripMenuItem.Click += new System.EventHandler(this.mentésToolStripMenuItem_Click);
       // 
       // kilépésToolStripMenuItem
       // 
@@ -121,7 +123,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(800, 450);
+      this.ClientSize = new System.Drawing.Size(1169, 477);
       this.Controls.Add(this.dgv);
       this.Controls.Add(this.menuStrip1);
       this.MainMenuStrip = this.menuStrip1;

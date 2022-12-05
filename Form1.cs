@@ -33,28 +33,44 @@ namespace VT
     }
 
         private void Betolt()
-        {
-            dsVT.ReadXml("VT.xml",
-              XmlReadMode.InferSchema);
-        }
+    		{
+			      try {
+				      dsVT.ReadXml("VT.xml",
+                    XmlReadMode.InferSchema);
+			        } catch (Exception) {
+				        Letrehoz();
+                Lement();
+              }
+		      }
 
-        private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)
+        private void kilépésToolStripMenuItem_Click(object sender, EventArgs e) // KILEP - KESZ
         {
              Close();
         }
 
-        private void filmekToolStripMenuItem_Click(object sender, EventArgs e)
+        private void filmekToolStripMenuItem_Click(object sender, EventArgs e) // FILMEK
         {
       dgv.Visible = true;
-      dgv.Dock = DockStyle.Fill;
+      //dgv.Dock = DockStyle.Fill;
       dgv.DataSource = dsVT.dtFilmek;
+    }
+
+        private void felhasználókToolStripMenuItem_Click(object sender, EventArgs e) // FELHASZNALOK
+        {
+      dgv.Visible = true;
+      //dgv.Dock = DockStyle.Fill;
+      dgv.DataSource = dsVT.dtUser;
+
+    }
+
+        private void mentésToolStripMenuItem_Click(object sender, EventArgs e) // MENTES - KESZ
+        {
+      Lement();
         }
 
-        private void felhasználókToolStripMenuItem_Click(object sender, EventArgs e)
+        private void kIBEToolStripMenuItem_Click(object sender, EventArgs e) // KIBE
         {
-      dgv.Visible = true;
-      dgv.Dock = DockStyle.Fill;
-      dgv.DataSource = dsVT.dtUser;
-    }
+
+        }
     }
 }
